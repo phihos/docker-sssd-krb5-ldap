@@ -1,5 +1,5 @@
 # Docker Image with SSSD,KRB5 and LDAP
-A Docker image that provides the SSSD serivice with Active Directory configuration
+A Docker image that provides the SSSD serivice with Active Directory configuration.
 
 ## Introduction
 
