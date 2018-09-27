@@ -1,10 +1,8 @@
 FROM ubuntu
 
 RUN apt-get update && apt-get install -y \
-	samba \
-    sssd \
-    krb5-user \
-    libpam-krb5
+      sssd \
+      krb5-user
 
 COPY assets/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
