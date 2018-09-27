@@ -24,4 +24,7 @@ Optional parameters are:
 | LDAP_USER_PRINCIPAL           | userPricipalName  | The LDAP attribute identifying the user name for Kerberos. Set this to a nonexisting entry if this differs from the actiol username. |
 | KERBEROS_DNS_DISCOVERY_DOMAIN | ${KERBEROS_REALM} | Change this, if your DNS uses another domain suffic than your AD realm.                                                              |
 
+## Contributing
+
+This image offers just enough options that it fits my usecase. If you would like to exand the list of options feel free to make a PR.
 
