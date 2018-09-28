@@ -50,5 +50,5 @@ and enter the correct password. If it says "login incorrect", then the AD part i
 
 ## Contributing
 
-This image offers just enough options that it fits my usecase. If you would like to exand the list of options feel free to make a PR.
+This image offers just enough options that it fits my usecase. If you would like to exend the list of options feel free to make a PR.
 
