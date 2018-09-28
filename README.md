@@ -14,8 +14,11 @@ docker run --name sssd \
     -e LDAP_BASE_DN="DC=YOURDOMAIN,DC=TLD" \
     -e LDAP_BIND_DN="CN=SOMEACCOUNT,DC=YOURDOMAIN,DC=TLD" \
     -e LDAP_BIND_PASSWORD=SOMEPASSWORD \
-    -e LDAP_URI=ldap://YOUR-AD-LDAP-SERVER/
+    -e LDAP_URI=ldap://YOUR-AD-LDAP-SERVER/ \
+    -v /var/lib/sss
 ```
+
+The volume is important because it can be mounted with ```--volume-from``` into other containers. These containers just need to have the SSSD client installed and can use the SSSD server remotely.
 
 Optional parameters are:
 
