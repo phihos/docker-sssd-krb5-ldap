@@ -11,6 +11,9 @@ set -e
 # check optional input
 [ -z "${KERBEROS_DNS_DISCOVERY_DOMAIN}" ] && KERBEROS_DNS_DISCOVERY_DOMAIN=${KERBEROS_REALM}
 [ -z "${LDAP_USER_PRINCIPAL}" ] && LDAP_USER_PRINCIPAL="userPrincipalName"
+[ -z "${LDAP_ENUMERATE}" ] && LDAP_ENUMERATE="false"
+[ -z "${LDAP_IGNORE_GROUP_MEMBERS}" ] && LDAP_IGNORE_GROUP_MEMBERS="true"
+[ -z "${LDAP_USER_MEMBEROF}" ] && LDAP_USER_MEMBEROF="memberOf"
 
 # put config files in place
 cat >/etc/krb5.conf <<EOL
@@ -28,7 +31,8 @@ services = nss, pam
 domains = ${KERBEROS_REALM}
 
 [domain/${KERBEROS_REALM}]
-enumerate = false
+enumerate = ${LDAP_ENUMERATE}
+ignore_group_members = ${LDAP_IGNORE_GROUP_MEMBERS}
 cache_credentials = true
 id_provider = ldap
 access_provider = ldap
@@ -42,6 +46,7 @@ ldap_tls_reqcert = never
 ldap_schema = ad
 ldap_id_mapping = True
 ldap_user_principal = ${LDAP_USER_PRINCIPAL}
+ldap_user_member_of = ${LDAP_USER_MEMBEROF}
 ldap_access_order = expire
 ldap_account_expire_policy = ad
 ldap_force_upper_case_realm = true

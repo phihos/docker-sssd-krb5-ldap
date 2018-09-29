@@ -26,6 +26,8 @@ Optional parameters are:
 |-------------------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | LDAP_USER_PRINCIPAL           | userPricipalName  | The LDAP attribute identifying the user name for Kerberos. Set this to a nonexisting entry if this differs from the actiol username. |
 | KERBEROS_DNS_DISCOVERY_DOMAIN | ${KERBEROS_REALM} | Change this, if your DNS uses another domain suffic than your AD realm.                                                              |
+| LDAP_ENUMERATE                | false             | If set to true all users and groups will be downloaded at startup. May cause bad performance.                                                    |
+| LDAP_IGNORE_GROUP_MEMBERS     | true              | If set to false ```getent group <groupname>``` will contain all group members. May cause bad performance.                                 |
 
 ## Troubleshooting
 
