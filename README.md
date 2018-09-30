@@ -1,4 +1,8 @@
 # Docker Image with SSSD,KRB5 and LDAP
+
+[![Automated Build](https://img.shields.io/docker/automated/phihos/sssd-krb5-ldap.svg)](https://hub.docker.com/r/phihos/sssd-krb5-ldap/)
+[![Docker Build Status](https://img.shields.io/docker/build/phihos/sssd-krb5-ldap.svg)](https://hub.docker.com/r/phihos/sssd-krb5-ldap/)
+
 A Docker image that provides the SSSD serivice with Active Directory configuration.
 
 ## Introduction
