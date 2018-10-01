@@ -9,4 +9,4 @@ RUN chmod +x /entrypoint.sh
 
 VOLUME /var/lib/sss
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/usr/sbin/sssd","-i"]
+CMD ["/usr/sbin/sssd","-i","-d","4"]
